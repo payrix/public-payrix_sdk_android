@@ -1,9 +1,15 @@
 # Payrix Mobile Android SDK
 Release Note Summary:
+- Version 1.0.1: This release includes a fully functional Demo App that includes in-source step-by-step instructions on how to Authenticate, Scan for and Connect a Bluetooth Card Reader, and how to perform a full payment transaction.
 - Version 1.0.0: This is the initial release of the Android version of the Payrix Mobile SDK.
-- This Repository contains the proprietary Payrix source code for the creation of the Android SDK.  This repository is for INTERNAL USE ONLY, and is not to be share with any external client or business partner without executive approval.
 
 ## Overview
+
+The SDK includes:
+- This README file
+- The Payrix Android SDK Developers Guide
+- The actual SDK Folder containing the 2 SDK libraries
+- The Payrix SDK Demo App
 
 The Payrix Android SDK enables customers to build mobile payment apps for the Android platform.
 
