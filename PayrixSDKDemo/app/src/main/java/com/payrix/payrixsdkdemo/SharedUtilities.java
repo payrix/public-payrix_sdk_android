@@ -19,7 +19,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class SharedUtilities
 {
-    private static SharedUtilities sharedInstance = null;
+    public static SharedUtilities sharedInstance = null;
     private SharedUtilities(){}
 
     // Active Merchant Information and Last used Tax Rate

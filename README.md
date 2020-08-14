@@ -1,5 +1,6 @@
 # Payrix Mobile Android SDK
 Release Note Summary:
+- Version 1.0.2: This release includes the fix to the PayCore error handler.  The API may send a null for the field in error.
 - Version 1.0.1: This release includes a fully functional Demo App that includes in-source step-by-step instructions on how to Authenticate, Scan for and Connect a Bluetooth Card Reader, and how to perform a full payment transaction.
 - Version 1.0.0: This is the initial release of the Android version of the Payrix Mobile SDK.
 

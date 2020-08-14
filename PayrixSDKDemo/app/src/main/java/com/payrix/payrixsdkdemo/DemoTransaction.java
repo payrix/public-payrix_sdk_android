@@ -191,12 +191,19 @@ public class DemoTransaction extends AppCompatActivity implements PayCardCallbac
     {
         // Convert array to string
         Float fltCost = Float.parseFloat(mTxtCost.getText().toString());
-        Float fltTaxRate = Float.parseFloat(mTxtTax.getText().toString());
-        fltTaxRate = fltTaxRate / 100.00f;
-        Float fltTip = Float.parseFloat(mTxtTip.getText().toString());
+        Float fltTaxRate = 0.0f;
+        Float fltTip = 0.0f;
+        if (!mTxtTax.getText().toString().equalsIgnoreCase(""))
+        {
+            fltTaxRate = Float.parseFloat(mTxtTax.getText().toString());
+            fltTaxRate = fltTaxRate / 100.00f;
+        }
+        if (!mTxtTip.getText().toString().equalsIgnoreCase(""))
+        {
+            fltTip = Float.parseFloat(mTxtTip.getText().toString());
+        }
 
         DecimalFormat decFmt = new DecimalFormat("0.00");
-        decFmt.setRoundingMode(RoundingMode.UP);
 
         mCurrentTransaction.amount = Double.parseDouble(decFmt.format(fltCost.doubleValue()));
         mCurrentTransaction.taxPercentage = fltTaxRate.doubleValue();
@@ -223,7 +230,6 @@ public class DemoTransaction extends AppCompatActivity implements PayCardCallbac
         Double dblTotal = mCurrentTransaction.amount + dblTaxAmt + mCurrentTransaction.tipAbsoluteAmount;
 
         DecimalFormat decFmt = new DecimalFormat("0.00");
-        decFmt.setRoundingMode(RoundingMode.UP);
 
         String logMsg = "Starting Transaction Processing: \nTotal Amount: " + decFmt.format(dblTotal);
         mLblTxnLog.setText(logMsg);
