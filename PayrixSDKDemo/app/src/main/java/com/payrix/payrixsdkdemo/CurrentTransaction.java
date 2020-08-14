@@ -7,7 +7,7 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class CurrentTransaction implements Serializable
 {
-    private static CurrentTransaction sharedInstance = null;
+    public static CurrentTransaction sharedInstance = null;
     private CurrentTransaction(){}
 
     public static synchronized CurrentTransaction getInstance()

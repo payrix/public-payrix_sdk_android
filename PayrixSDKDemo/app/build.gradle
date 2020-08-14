@@ -8,7 +8,7 @@ android {
         minSdkVersion 28
         targetSdkVersion 28
         versionCode 1
-        versionName "Version 1.0.1 (Build 2007.02)"
+        versionName "Version 1.0.2 (Build 2008.01)"
         ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
