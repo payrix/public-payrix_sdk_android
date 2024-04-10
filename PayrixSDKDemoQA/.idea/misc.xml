@@ -1,0 +1,23 @@
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/rounded_custom_view.xml" value="0.1065" />
+        <entry key="app/src/main/res/layout/activity_demo_start.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/content_demo_start.xml" value="0.3903002309468822" />
+        <entry key="app/src/main/res/layout/content_demo_transaction.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
