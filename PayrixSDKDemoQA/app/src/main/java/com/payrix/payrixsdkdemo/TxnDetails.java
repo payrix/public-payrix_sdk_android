@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.payrix.payrixsdk.PayDevice;
 import com.payrix.payrixsdk.PayMerchant;
 import com.payrix.payrixsdk.PayResponse;
@@ -380,6 +382,7 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
 
     private void showInitialScene() {
         mBtnRefund.setVisibility(View.INVISIBLE);
+        progressBar.setVisibility(View.VISIBLE);
 
         doShowTransData();
         if (mFoundOriginalTxn) {
@@ -637,6 +640,7 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
         if ((theMerchantID == null) || (theMerchantID.equals("")) || (theSessionID == null) || (theSessionID.equals(""))) {
             sharedUtils.showMessage(this, "Transaction History", "Your session has expired.  Please Sign Out and Sign Back in and Retry.");
         } else {
+            progressBar.setVisibility(View.VISIBLE);
             TxnDataRequest dataRequest = TxnDataRequest.getInstance();
             dataRequest.payrixMerchantID = theMerchantID;
             //dataRequest.paySessionKey = theSessionID;
@@ -1137,9 +1141,9 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
            *  3 = Retrieve Related (Subsequent) Transactions;
            *  4 = Check if Transaction is Refund Eligible
         */
+        progressBar.setVisibility(View.GONE);
         if (!success && error != null) {
-            sharedUtils.showMessage(TxnDetails.this, "Transaction Receipt", error);
-            return;
+            Snackbar.make(mBtnRefund, error, Snackbar.LENGTH_LONG).show();
         }
         switch (responseCode) {
             case 3:
@@ -1166,6 +1170,7 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
 
     @Override
     public void didReceiveRefundEligibleStatus(Boolean success) {
+        progressBar.setVisibility(View.GONE);
         if (success) {
             mBtnRefund.setVisibility(View.VISIBLE);
         } else {

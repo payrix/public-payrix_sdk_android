@@ -150,7 +150,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:indeterminate="true"
-        android:visibility="gone"
         android:indeterminateTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
