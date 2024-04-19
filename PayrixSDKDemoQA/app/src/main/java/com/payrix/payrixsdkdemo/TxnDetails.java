@@ -1137,6 +1137,10 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
            *  3 = Retrieve Related (Subsequent) Transactions;
            *  4 = Check if Transaction is Refund Eligible
         */
+        if (!success && error != null) {
+            sharedUtils.showMessage(TxnDetails.this, "Transaction Receipt", error);
+            return;
+        }
         switch (responseCode) {
             case 3:
                 if (success && txnDataResponse != null) {
