@@ -1143,7 +1143,9 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
         */
         progressBar.setVisibility(View.GONE);
         if (!success && error != null) {
-            Snackbar.make(mBtnRefund, error, Snackbar.LENGTH_LONG).show();
+            if (error.equalsIgnoreCase("Errors during request:")) {
+                Snackbar.make(mBtnRefund, error, Snackbar.LENGTH_LONG).show();
+            }
         }
         switch (responseCode) {
             case 3:
@@ -1171,7 +1173,7 @@ public class TxnDetails extends AppCompatActivity implements PayrixSDKCallbacks 
     @Override
     public void didReceiveRefundEligibleStatus(Boolean success) {
         progressBar.setVisibility(View.GONE);
-        if (success) {
+        if (!success) {
             mBtnRefund.setVisibility(View.VISIBLE);
         } else {
             mBtnRefund.setVisibility(View.INVISIBLE);
