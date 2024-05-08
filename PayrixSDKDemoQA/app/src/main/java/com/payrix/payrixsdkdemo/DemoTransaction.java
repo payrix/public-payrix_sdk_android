@@ -333,8 +333,9 @@ public class DemoTransaction extends AppCompatActivity implements PayrixSDKCallb
             // Display remainder of fields required for manual entry.
             //mBtnStartTxn.setVisibility(View.INVISIBLE);
             //mBtnStartTxn.setText("Continue");
-
+            cancelBtn.setVisibility(View.GONE);
             doManualTxn();
+
 
            // mCardEntry.setVisibility(View.VISIBLE);
             // Follow Steps: 5b - 7b

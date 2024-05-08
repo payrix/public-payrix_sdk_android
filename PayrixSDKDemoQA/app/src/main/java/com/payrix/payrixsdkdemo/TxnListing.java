@@ -230,6 +230,7 @@ public class TxnListing extends AppCompatActivity implements PayrixSDKCallbacks,
             }
         }
 
+
         Integer useRefunded = fromTxn.getRefunded();
         if (useRefunded == null)
         {
@@ -237,7 +238,11 @@ public class TxnListing extends AppCompatActivity implements PayrixSDKCallbacks,
         }
         retHistObj.setRefundedAmt(useRefunded.doubleValue());
 
-        Double useSaleAmt = totAmt.doubleValue() - useTax.doubleValue();
+        /*if (fromTxn.getFortxn() != null) {
+            retHistObj.setRefundedAmt(fromTxn.getFortxn().getRefunded().doubleValue());
+        }*/
+
+        Double useSaleAmt = totAmt - useTax.doubleValue();
 
         retHistObj.setSaleAmt(useSaleAmt);
 
