@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">PayrixSDKDemo</string>
+    <string name="sharedprefname">PWLSHAREDAPPINFO</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_demo_start">Payrix SDK Demo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searching_for_readers">Searching for Readers</string>
+    <string name="title_activity_device_details">DeviceDetailsActivity</string>
+    <string name="update_title">UPDATE</string>
+    <string name="force_update">Force Update</string>
+    <string name="no_device_found_message">No device found, please can again</string>
+    <string name="payment_refund">PAYMENT REFUND</string>
+    <string name="transaction_logs">Transaction Logs</string>
+    <string name="version_information">[Version Information]</string>
+    <string name="payrix_copyright">Copyright (c) 2021 Payrix Holdings, LLC. All Rights Reserved.</string>
+    <string name="device_configuration">Device Configuration</string>
+    <string name="processing_log">Processing Log:</string>
+    <string name="payment_transaction">Payment Transaction</string>
+    <string name="scan_and_select_reader">Scan and Select Reader</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="live_prod">Live - Prod</string>
+    <string name="sandbox">SandBox</string>
+    <string name="transaction_agreement1">I AGREE TO PAY ABOVE TOTAL AMOUNT\nIn ACCORDANCE WITH CARD ISSUER\'S</string>
+    <string name="transaction_agreement2">(MERCHANT AGREEMENT IF CREDIT VOUCHER)</string>
+    <string name="transaction_agreement3">RETAIN THIS COPY FOR STATEMENT</string>
+    <string name="transaction_agreement4">VERIFICATION</string>
+
+</resources>

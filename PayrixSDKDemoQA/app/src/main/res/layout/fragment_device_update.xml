@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ota.DeviceUpdateFragment">
+
+    <!-- Configuration Version -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/config_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Configuration Version"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/config_info_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_info"
+                app:srcCompat="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/config_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/config_title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Current Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/config_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/config_version"
+                app:layout_constraintTop_toBottomOf="@+id/config_title"
+                android:text="Loading... "/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/config_payrix_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/config_version"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Latest Payrix Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/config_payrix_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/config_payrix_version"
+                app:layout_constraintTop_toBottomOf="@+id/config_version"
+                android:text="Loading... "/>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/config_update_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/config_payrix_version">
+
+                <Button
+                    android:id="@+id/configUpdateBtn"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Update" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/configRecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:text="(Recommended)"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Firmware Version -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firmware_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Firmware Version"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firmware_info_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_info"
+                app:srcCompat="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firmware_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/firmware_title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Current Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firmware_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/firmware_version"
+                app:layout_constraintTop_toBottomOf="@+id/firmware_title"
+                android:text="Loading... "/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firmware_payrix_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/firmware_version"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Latest Payrix Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/firmware_payrix_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/firmware_payrix_version"
+                app:layout_constraintTop_toBottomOf="@+id/firmware_version"
+                android:text="Loading... "/>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/firmware_update_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firmware_payrix_version">
+
+                <Button
+                    android:id="@+id/firmwareUpdateBtn"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Update" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/firmwareRecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:text="(Recommended)"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Encryption Key Profile -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key_profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:textSize="25sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Encryption Key Profile"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/key_profile_info_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_info"
+                app:srcCompat="@drawable/ic_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key_profile_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/key_profile_title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Current Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key_profile_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/key_profile_version"
+                app:layout_constraintTop_toBottomOf="@+id/key_profile_title"
+                android:text="Loading... "/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key_profile_payrix_version"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/key_profile_version"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Latest Payrix Version:"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/key_profile_payrix_version_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@+id/key_profile_payrix_version"
+                app:layout_constraintTop_toBottomOf="@+id/key_profile_version"
+                android:text="Loading... "/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/key_profile_update_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/key_profile_payrix_version">
+
+                <Button
+                    android:id="@+id/keyProfileUpdateBtn"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Update" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/keyProfileRecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:text="(Recommended)"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
