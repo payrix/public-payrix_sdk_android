@@ -129,9 +129,9 @@ public class DemoAuthentication extends AppCompatActivity implements PayrixSDKCa
     public void txnSessionBtn(View view) {
         mPBAuth.setVisibility(View.VISIBLE);
         TxnSessionConfig txnSessionConfig = new TxnSessionConfig.Builder(PRIVATE_API_KEY, MERCHANT_ID)
-                .setDuration(2000)
-                .setMaxTimesApproved(20)
-                .setMaxTimesUse(10).build();
+                .setDuration(4000)
+                .setMaxTimesApproved(200)
+                .setMaxTimesUse(100).build();
 
         payrixSDK.doGetTxnSessionKey(txnSessionConfig);
     }
